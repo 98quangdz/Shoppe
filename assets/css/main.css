@@ -1,5 +1,5 @@
 .header {
-    height: 120px;
+    height: var(--header-height);
     background-image: linear-gradient(0,#ff002f,#ff3433 );
 }
 .header__navbar {
@@ -11,7 +11,7 @@
 .header__navbar-list {
     list-style: none;
     padding-left: 0;
-    margin-top: 4px;
+    margin:4px 0 0 0;
     display: inline-flex;
 }
 
@@ -222,6 +222,7 @@
    right: 0;
    bottom: 0; 
    display: flex;
+   animation: fadeIn linear 0.1s ;
 }
 .modal__overlay {
     position: absolute;
@@ -335,4 +336,55 @@
 .auth-form__socials--google {
     color: #666;
     background-color: var(--white-color);
+}
+.auth-form__help {
+    display: flex;
+    justify-content: flex-end;
+
+}
+.auth-form__help-link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #939393;
+    
+}
+.auth-form__help-separate {
+    display: block;
+    height: 22px;
+    margin: 1px 16px 0;
+    border-left: 1 px solid var(--border-color);
+
+}
+.auth-form__help-link-forgot {
+    color: var(--primary-color);
+}
+/* header width search */
+.header-width-search{
+    height:var(--header-width-search-height);
+    display: flex;
+    align-items: center;
+
+}
+.header__logo{
+    width: 200px;
+}
+.header__logo-img{
+    width: 150px;
+    color: var(--white-color);
+}
+.header__search {
+    height: 40px;
+    flex: 1;
+    border-radius: 2px;
+    background-color: var(--white-color);
+
+}
+.header__cart {
+    width: 150px;
+    text-align: center;
+}
+.header__cart-icon {
+    color: var(--white-color);
+    font-size: 2.4rem;
+    margin-top: 6px;
 }

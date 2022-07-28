@@ -4,6 +4,9 @@
     --black-color:#000;
     --text-color:#333;
     --border-color:#dbdbdb;
+    --navbar-height:34px;
+    --header-height:120px;
+    --header-width-search-height:calc(var(--header-height) - var(--navbar-height));
 }
 * {
     box-sizing: inherit;
@@ -28,10 +31,13 @@ html {
 }
 /* Button style */
 .modal__body {
+    --growth-form:0.7:
+    --growth-to:1;
     display: block;
     margin: auto;
     position: relative;
     z-index: 1;
+    animation: growth linear 0.1s;
 }
 .btn {
     min-width: 142px;
@@ -48,6 +54,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    line-height: 1.6rem;
 }
 .btn.btn--normal:hover {
     background-color: rgba(0, 0, 0, 0.05);
@@ -87,5 +94,13 @@ html {
     to {
         opacity: 1;
         transform: (1);
+    }
+}
+@keyframes growth {
+    from{
+        transform: scale(var(--growth-form));
+    }
+    to {
+        transform: scale(var(--growth-form));
     }
 }
